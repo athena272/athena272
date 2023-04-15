@@ -6,7 +6,7 @@
 
 
 - 🔭 I’m currently working on Develop my skills
-- 🌱 I’m currently learning Flutter(Mobile Development) and ReactJS(Web Development)
+- 🌱 I’m currently learning ReactJS(Web Development), Design and Analysis of Algorithms for College
 - ⚡ Fun fact: I'm an Otaku
 - 🌐 Website: https://athena272portfolio.vercel.app/ 
 
