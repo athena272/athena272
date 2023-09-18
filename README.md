@@ -43,5 +43,4 @@
  </picture>
 </div>
 
-![snake gif](https://github.com/athena272/athena272/blob/output/github-contribution-grid-snake.gif)
-
+![Snake animation](https://github.com/athena272/athena272/blob/output/github-contribution-grid-snake.svg)
