@@ -42,5 +42,3 @@
    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/athena272/athena272/output/github-contribution-grid-snake.svg">
  </picture>
 </div>
-
-![snake animation](https://github.com/athena272/athena272/blob/output/github-contribution-grid-snake2.svg)
