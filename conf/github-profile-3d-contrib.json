@@ -1,9 +1,9 @@
 [
     {
         "type": "normal",
-        "fileName": "day.svg",
-        "backgroundColor": "#ffffff",
-        "foregroundColor": "#00000f",
+        "fileName": "profile-custom-evergreen.svg",
+        "backgroundColor": "#00000f",
+        "foregroundColor": "#ffffff",
         "strongColor": "#111133",
         "weakColor": "gray",
         "radarColor": "#47a042",
@@ -15,26 +15,6 @@
             "#47a042",
             "#1d6a23"
         ]
-    },
-    {
-        "type": "rainbow",
-        "fileName": "night.svg",
-        "backgroundColor": "#00000f",
-        "foregroundColor": "#eeeeff",
-        "strongColor": "rgb(255,200,55)",
-        "weakColor": "#aaaaaa",
-        "radarColor": "rgb(255,200,55)",
-        "growingAnimation": true,
-        "saturation": "50%",
-        "contribLightness": [
-            "20%",
-            "30%",
-            "35%",
-            "40%",
-            "50%"
-        ],
-        "duration": "10s",
-        "hueRatio": -7
     },
     {
         "type": "normal",
@@ -62,35 +42,24 @@
         }
     },
     {
-        "type": "normal",
-        "fileName": "profile-custom-evergreen.svg",
-        "backgroundColor": "#ffffff",
-        "foregroundColor": "#00000f",
-        "strongColor": "#111133",
-        "weakColor": "gray",
-        "radarColor": "#47a042",
+        "type": "rainbow",
+        "fileName": "profile-custom-rainbow.svg",
+        "backgroundColor": "#00000f",
+        "foregroundColor": "#eeeeff",
+        "strongColor": "rgb(255,200,55)",
+        "weakColor": "#aaaaaa",
+        "radarColor": "rgb(255,200,55)",
         "growingAnimation": true,
-        "contribColors": [
-            "#efefef",
-            "#d8e887",
-            "#8cc569",
-            "#47a042",
-            "#1d6a23"
-        ]
-    },
-    {
-        "type": "pie_lang_only",
-        "fileName": "pie_lang_only.svg",
-        "backgroundColor": "#ffffff",
-        "foregroundColor": "#00000f"
-    },
-    {
-        "type": "radar_contrib_only",
-        "fileName": "radar_contrib_only.svg",
-        "backgroundColor": "#ffffff",
-        "foregroundColor": "#00000f",
-        "weakColor": "gray",
-        "radarColor": "#47a042"
+        "saturation": "50%",
+        "contribLightness": [
+            "20%",
+            "30%",
+            "35%",
+            "40%",
+            "50%"
+        ],
+        "duration": "10s",
+        "hueRatio": -7
     },
     {
         "type": "season",
