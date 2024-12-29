@@ -2,14 +2,14 @@
     {
         "type": "normal",
         "fileName": "profile-custom-evergreen.svg",
-        "backgroundColor": "#00000f",
-        "foregroundColor": "#ffffff",
-        "strongColor": "#ffc837",
+        "backgroundColor": "#ffffff",
+        "foregroundColor": "#00000f",
+        "strongColor": "#111133",
         "weakColor": "gray",
         "radarColor": "#47a042",
         "growingAnimation": true,
         "contribColors": [
-            "#444444",
+            "#efefef",
             "#d8e887",
             "#8cc569",
             "#47a042",
@@ -22,7 +22,7 @@
         "backgroundColor": "#ffffff",
         "foregroundColor": "#00000f",
         "strongColor": "#111133",
-        "weakColor": "#111133",
+        "weakColor": "gray",
         "radarColor": "#47a042",
         "growingAnimation": true,
         "contribColors": [
