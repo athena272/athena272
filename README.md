@@ -44,4 +44,11 @@
     src="https://raw.githubusercontent.com/athena272/athena272/output/github-contribution-grid-snake.svg"
   />
 </picture>
- 
+
+ <p align="center" >
+	<picture>
+	  <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/athena272/athena272/output-3d-contrib/night.svg" />
+	  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/athena272/athena272/output-3d-contrib/day.svg" />
+	  <img alt="github profile contributions chart"    src="https://raw.githubusercontent.com/athena272/athena272/output-3d-contrib/day.svg" />
+	</picture>
+</p>
