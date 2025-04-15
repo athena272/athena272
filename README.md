@@ -7,7 +7,6 @@
 
 - 🔭 I’m currently working on Develop my skills
 - 🌱 I’m currently learning React with Typescript + Next.js, Design and Analysis of Algorithms(for College)
-- ⚡ Fun fact: I'm an Otaku
 - 🌐 Website: https://athena272portfolio.vercel.app/ 
 
 <div>
