@@ -1,5 +1,12 @@
 ## Hoya World! I'm Guilherme R. Alves
  
+Software developer specialized in Node.js and modern JavaScript. I build scalable APIs and microservices with Express, NestJS and TypeScript, implementing JWT authentication, test suites with Jest and Supertest, application security and CI pipelines. I leverage serverless architectures on AWS through the Serverless Framework, integrating SQS, S3 and other cloud services for high availability.
+
+On the client side I deliver high-performance, SEO-friendly and accessible interfaces in React, Next.js and Angular, optimising products such as the BNE employment portal. Experience with C# and .NET microservices gives me a full-stack mindset and smooth collaboration with hybrid teams.
+
+I also maintain a solid PHP background with Laravel, Symfony and Doctrine, which helps when tackling legacy or cross-platform projects. I adhere to SOLID principles, design patterns, continuous refactoring and clean-code practices, relying on Google Analytics and responsible web security to guide decisions.
+
+Currently pursuing a BSc in Computer Engineering at the Federal University of Sergipe and an Associate Degree in Systems Analysis and Development at Unicesumar, I seek continuous learning, collaboration and the delivery of impactful, sustainable solutions.
 
 "Coding shined a light in my darkest days." ⭐
 
