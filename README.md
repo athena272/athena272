@@ -18,36 +18,56 @@ Currently pursuing a BSc in Computer Engineering at the Federal University of Se
 
 <div>
  <img align="center" alt="Gui-Athena" width="250em" height="300em" style="border-radius:50px;" src="https://media.tenor.com/AlUkiGkR2j8AAAAC/new-game-ahagon-umiko-programming.gif" />
- </div>
-
-<div align="center">
-  <a href="https://github.com/athena272">
-    <img 
-      height="180em" 
-      src="https://github-stats-extended.vercel.app/api?username=athena272&show_icons=true&theme=radical&include_all_commits=true"
-      alt="GitHub Stats"
-    />
-  </a>
-  <a href="https://github.com/athena272">
-    <img 
-      height="180em" 
-      src="https://github-stats-extended.vercel.app/api/top-langs/?username=athena272&layout=compact&langs_count=8&theme=radical"
-      alt="Top Languages"
-    />
-  </a>
 </div>
 
-<p align="center">
-  <img alt="Gui-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
-  <img alt="Gui-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
-  <img alt="Gui-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
-  <img alt="Gui-Type" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg">
-  <img alt="Gui-ReactJS" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
-  <img alt="Gui-Angular14" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg">
-  <img alt="Gui-NodeJS" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain.svg">
-  <img alt="Gui-Flutter" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg">
-  <img alt="Gui-Haskell" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/haskell/haskell-original.svg">
-</p>
+<br/>
+
+<div align="center">
+  <img 
+    height="180em" 
+    src="https://github-stats-extended.vercel.app/api?username=athena272&show_icons=true&theme=radical&include_all_commits=true"
+    alt="GitHub Stats"
+  />
+  <img 
+    height="180em" 
+    src="https://github-stats-extended.vercel.app/api/top-langs/?username=athena272&layout=compact&langs_count=8&theme=radical"
+    alt="Top Languages"
+  />
+</div>
+
+<br/>
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img alt="HTML" height="35" width="45" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+    </td>
+    <td align="center">
+      <img alt="CSS" height="35" width="45" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+    </td>
+    <td align="center">
+      <img alt="JavaScript" height="35" width="45" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
+    </td>
+    <td align="center">
+      <img alt="TypeScript" height="35" width="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg">
+    </td>
+    <td align="center">
+      <img alt="React" height="35" width="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
+    </td>
+    <td align="center">
+      <img alt="Angular" height="35" width="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg">
+    </td>
+    <td align="center">
+      <img alt="Node.js" height="35" width="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain.svg">
+    </td>
+    <td align="center">
+      <img alt="Flutter" height="35" width="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg">
+    </td>
+    <td align="center">
+      <img alt="Haskell" height="35" width="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/haskell/haskell-original.svg">
+    </td>
+  </tr>
+</table>
 
 <picture>
   <source
