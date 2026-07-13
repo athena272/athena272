@@ -13,7 +13,7 @@ on:
 jobs:
   generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 120
     permissions:
       contents: write
       actions: read
@@ -58,6 +58,13 @@ jobs:
               owner = config['owner']
 
               names = config['sync_repos']
+              if names.nil? || names.empty?
+                max_repos = config['max_sync_repos']
+                max_repos = 300 if max_repos.nil?
+                max_repos = max_repos.to_i
+                names = Github::Client.new.user_repositories(max_repos: max_repos).map { |repo| repo[:full_name] }
+                puts \"Syncing #{names.size} repositories\"
+              end
               names = [\"#{owner}/#{owner}\"] if names.nil? || names.empty?
 
               names.each do |full_name|
