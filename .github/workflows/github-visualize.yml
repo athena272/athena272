@@ -1,0 +1,157 @@
+name: generate github-visualize charts
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+
+  workflow_dispatch:
+
+  push:
+    branches:
+      - main
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Start github-visualize
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          docker run -d --name github-visualize -p 7592:80 \
+            -e SECRET_KEY_BASE="$(openssl rand -hex 64)" \
+            -e GITHUB_TOKEN="${GITHUB_TOKEN}" \
+            -e GITHUB_OWNER="athena272" \
+            -e APP_TIME_ZONE="America/Sao_Paulo" \
+            -e SOLID_QUEUE_IN_PUMA=1 \
+            akitaonrails/github-visualize:latest
+
+          for i in $(seq 1 90); do
+            if curl -sf http://localhost:7592/up > /dev/null; then
+              echo "github-visualize is ready"
+              exit 0
+            fi
+            sleep 2
+          done
+
+          echo "github-visualize failed to start"
+          docker logs github-visualize
+          exit 1
+
+      - name: Sync repositories
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          docker cp conf/github-visualize.json github-visualize:/tmp/github-visualize.json
+
+          docker exec \
+            -e GITHUB_TOKEN="${GITHUB_TOKEN}" \
+            github-visualize bin/rails runner "
+              config = JSON.parse(File.read('/tmp/github-visualize.json'))
+              owner = config['owner']
+              max_repos = config.fetch('max_sync_repos', 3)
+
+              names = config['sync_repos']
+              if names.nil? || names.empty?
+                names = Github::Client.new.user_repositories(max_repos: max_repos).map { |repo| repo[:full_name] }
+              end
+
+              names.each do |full_name|
+                repo_owner, repo_name = full_name.split('/', 2)
+                repository = Repository.find_or_initialize_by(owner: repo_owner, name: repo_name)
+                repository.sync_status ||= 'pending'
+                repository.save!
+                SyncRepositoryJob.perform_now(repository)
+              end
+
+              highlight = config['highlight_repo']
+              if highlight.nil? || highlight.empty?
+                window = config.fetch('window_days', 42).to_i
+                since = window.days.ago
+                best = Repository.joins(:commits)
+                  .where(commits: { committed_at: since.. })
+                  .group('repositories.id')
+                  .order(Arel.sql('COUNT(commits.id) DESC'))
+                  .first
+                highlight = best&.name || names.first&.split('/', 2)&.last || owner
+              end
+
+              File.write('/tmp/highlight_repo', highlight)
+              puts \"Highlight repo: #{highlight}\"
+            "
+
+      - name: Capture chart screenshots
+        run: |
+          mkdir -p dist
+
+          HIGHLIGHT_REPO="$(docker exec github-visualize cat /tmp/highlight_repo)"
+          WINDOW_DAYS="$(node -pe "JSON.parse(require('fs').readFileSync('conf/github-visualize.json','utf8')).window_days || 42")"
+          OWNER="$(node -pe "JSON.parse(require('fs').readFileSync('conf/github-visualize.json','utf8')).owner")"
+
+          npm init -y > /dev/null 2>&1
+          npm install playwright@1.49.1 > /dev/null 2>&1
+          npx playwright install chromium --with-deps > /dev/null 2>&1
+
+          cat > screenshot.mjs << 'SCRIPT'
+          import { chromium } from "playwright";
+          import fs from "node:fs";
+
+          const owner = process.env.OWNER;
+          const repo = process.env.HIGHLIGHT_REPO;
+          const days = process.env.WINDOW_DAYS;
+          const base = "http://localhost:7592";
+
+          const browser = await chromium.launch();
+          const context = await browser.newContext({
+            viewport: { width: 1400, height: 2400 },
+            reducedMotion: "reduce",
+          });
+          const page = await context.newPage();
+
+          await page.goto(`${base}/repos/${owner}/${repo}?days=${days}`, {
+            waitUntil: "networkidle",
+            timeout: 120000,
+          });
+          await page.waitForTimeout(2000);
+
+          const sections = [
+            ["section[data-controller='timeline']", "dist/commit-timeline.png"],
+            ["section[data-controller='heatmap']", "dist/heatmap.png"],
+            ["section[data-controller='ci-lanes']", "dist/ci-race.png"],
+          ];
+
+          for (const [selector, path] of sections) {
+            const element = page.locator(selector);
+            if (await element.count()) {
+              await element.screenshot({ path });
+            }
+          }
+
+          await page.goto(base, { waitUntil: "networkidle", timeout: 120000 });
+          await page.waitForTimeout(1500);
+          await page.screenshot({ path: "dist/dashboard.png", fullPage: true });
+
+          fs.writeFileSync(
+            "dist/meta.json",
+            JSON.stringify({ owner, repo, days }, null, 2)
+          );
+
+          await browser.close();
+          SCRIPT
+
+          OWNER="${OWNER}" HIGHLIGHT_REPO="${HIGHLIGHT_REPO}" WINDOW_DAYS="${WINDOW_DAYS}" node screenshot.mjs
+
+      - name: Push charts to output branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output-github-visualize
+          build_dir: dist
+          commit_message: "update github-visualize charts"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
