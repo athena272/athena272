@@ -16,13 +16,14 @@ jobs:
     timeout-minutes: 30
     permissions:
       contents: write
+      actions: read
 
     steps:
       - uses: actions/checkout@v4
 
       - name: Start github-visualize
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
         run: |
           docker run -d --name github-visualize -p 7592:80 \
             -e SECRET_KEY_BASE="$(openssl rand -hex 64)" \
@@ -46,7 +47,7 @@ jobs:
 
       - name: Sync repositories
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
         run: |
           docker cp conf/github-visualize.json github-visualize:/tmp/github-visualize.json
 
@@ -55,12 +56,9 @@ jobs:
             github-visualize bin/rails runner "
               config = JSON.parse(File.read('/tmp/github-visualize.json'))
               owner = config['owner']
-              max_repos = config.fetch('max_sync_repos', 3)
 
               names = config['sync_repos']
-              if names.nil? || names.empty?
-                names = Github::Client.new.user_repositories(max_repos: max_repos).map { |repo| repo[:full_name] }
-              end
+              names = [\"#{owner}/#{owner}\"] if names.nil? || names.empty?
 
               names.each do |full_name|
                 repo_owner, repo_name = full_name.split('/', 2)
