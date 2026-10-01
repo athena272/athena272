@@ -41,7 +41,7 @@ jobs:
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: top-langs
-          options: username=${{ github.repository_owner }}&layout=compact&hide_border=true
+          options: username=${{ github.repository_owner }}&layout=compact&hide_border=true&hide=html,css,scss&size_weight=0.5&count_weight=0.5
           path: dist/top-langs.svg
           token: ${{ secrets.STATS_TOKEN }}
 
@@ -49,7 +49,7 @@ jobs:
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: top-langs
-          options: username=${{ github.repository_owner }}&layout=compact&hide_border=true&theme=github_dark
+          options: username=${{ github.repository_owner }}&layout=compact&hide_border=true&hide=html,css,scss&size_weight=0.5&count_weight=0.5&theme=github_dark
           path: dist/top-langs-dark.svg
           token: ${{ secrets.STATS_TOKEN }}
 
