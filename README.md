@@ -130,6 +130,19 @@ Currently pursuing a BSc in Computer Engineering at the Federal University of Se
   </tr>
 </table>
 
+<br/>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=athena272&show_icons=true&hide_border=true&theme=github_dark" />
+    <img alt="GitHub stats" height="170" src="https://github-readme-stats.vercel.app/api?username=athena272&show_icons=true&hide_border=true" />
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=athena272&layout=compact&hide_border=true&theme=github_dark" />
+    <img alt="Top languages" height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=athena272&layout=compact&hide_border=true" />
+  </picture>
+</p>
+
 <picture>
   <source
     media="(prefers-color-scheme: dark)"
