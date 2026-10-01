@@ -24,32 +24,108 @@ Currently pursuing a BSc in Computer Engineering at the Federal University of Se
 
 <table align="center">
   <tr>
+    <td align="center"><b>Front-end</b></td>
     <td align="center">
-      <img alt="HTML" height="35" width="45" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+      <img alt="HTML" title="HTML" height="35" width="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
     </td>
     <td align="center">
-      <img alt="CSS" height="35" width="45" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+      <img alt="CSS" title="CSS" height="35" width="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
     </td>
     <td align="center">
-      <img alt="JavaScript" height="35" width="45" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
+      <img alt="JavaScript" title="JavaScript" height="35" width="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg">
     </td>
     <td align="center">
-      <img alt="TypeScript" height="35" width="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg">
+      <img alt="TypeScript" title="TypeScript" height="35" width="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg">
     </td>
     <td align="center">
-      <img alt="React" height="35" width="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
+      <img alt="React" title="React" height="35" width="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
     </td>
     <td align="center">
-      <img alt="Angular" height="35" width="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg">
+      <img alt="Next.js" title="Next.js" height="35" width="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg">
     </td>
     <td align="center">
-      <img alt="Node.js" height="35" width="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain.svg">
+      <img alt="Angular" title="Angular" height="35" width="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg">
     </td>
     <td align="center">
-      <img alt="Flutter" height="35" width="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg">
+      <img alt="AngularJS" title="AngularJS" height="35" width="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg">
+    </td>
+  </tr>
+</table>
+
+<table align="center">
+  <tr>
+    <td align="center"><b>Back-end</b></td>
+    <td align="center">
+      <img alt="Node.js" title="Node.js" height="35" width="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain.svg">
     </td>
     <td align="center">
-      <img alt="Haskell" height="35" width="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/haskell/haskell-original.svg">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/express/white">
+        <img alt="Express" title="Express" height="35" width="45" src="https://cdn.simpleicons.org/express/000000">
+      </picture>
+    </td>
+    <td align="center">
+      <img alt="NestJS" title="NestJS" height="35" width="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg">
+    </td>
+    <td align="center">
+      <img alt="C#" title="C#" height="35" width="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg">
+    </td>
+    <td align="center">
+      <img alt=".NET" title=".NET" height="35" width="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg">
+    </td>
+    <td align="center">
+      <img alt="PHP" title="PHP" height="35" width="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg">
+    </td>
+    <td align="center">
+      <img alt="Laravel" title="Laravel" height="35" width="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg">
+    </td>
+    <td align="center">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/symfony/white">
+        <img alt="Symfony" title="Symfony" height="35" width="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/symfony/symfony-original.svg">
+      </picture>
+    </td>
+    <td align="center">
+      <img alt="Doctrine" title="Doctrine" height="35" width="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/doctrine/doctrine-original.svg">
+    </td>
+  </tr>
+</table>
+
+<table align="center">
+  <tr>
+    <td align="center"><b>Cloud & Tools</b></td>
+    <td align="center">
+      <img alt="AWS" title="AWS" height="35" width="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg">
+    </td>
+    <td align="center">
+      <img alt="Google Cloud" title="Google Cloud" height="35" width="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg">
+    </td>
+    <td align="center">
+      <img alt="Serverless Framework" title="Serverless Framework" height="35" width="45" src="https://cdn.simpleicons.org/serverless">
+    </td>
+    <td align="center">
+      <img alt="Jest" title="Jest" height="35" width="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg">
+    </td>
+    <td align="center">
+      <img alt="Git" title="Git" height="35" width="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg">
+    </td>
+    <td align="center">
+      <img alt="GitHub Actions" title="GitHub Actions" height="35" width="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg">
+    </td>
+  </tr>
+</table>
+
+<table align="center">
+  <tr>
+    <td align="center"><b>Others</b></td>
+    <td align="center">
+      <img alt="Dart" title="Dart" height="35" width="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg">
+    </td>
+    <td align="center">
+      <img alt="Flutter" title="Flutter" height="35" width="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg">
+    </td>
+    <td align="center">
+      <img alt="Haskell" title="Haskell" height="35" width="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/haskell/haskell-original.svg">
     </td>
   </tr>
 </table>
