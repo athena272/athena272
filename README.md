@@ -132,17 +132,6 @@ Currently pursuing a BSc in Computer Engineering at the Federal University of Se
 
 <br/>
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/athena272/athena272/output-stats/stats-dark.svg" />
-    <img alt="GitHub stats" height="170" src="https://raw.githubusercontent.com/athena272/athena272/output-stats/stats.svg" />
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/athena272/athena272/output-stats/top-langs-dark.svg" />
-    <img alt="Top languages" height="170" src="https://raw.githubusercontent.com/athena272/athena272/output-stats/top-langs.svg" />
-  </picture>
-</p>
-
 <picture>
   <source
     media="(prefers-color-scheme: dark)"
