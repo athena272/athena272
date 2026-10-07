@@ -161,7 +161,7 @@ Currently pursuing a BSc in Computer Engineering at the Federal University of Se
  <p align="center" >
 	<picture>
 	  <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/athena272/athena272/output-3d-contrib/profile-custom-gitblock.svg" />
-	  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/athena272/athena272/output-3d-contrib/day.svg" />
-	  <img alt="github profile contributions chart"    src="https://raw.githubusercontent.com/athena272/athena272/output-3d-contrib/day.svg" />
+	  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/athena272/athena272/output-3d-contrib/profile-custom-gitblock.svg" />
+	  <img alt="github profile contributions chart"    src="https://raw.githubusercontent.com/athena272/athena272/output-3d-contrib/profile-custom-gitblock.svg" />
 	</picture>
 </p>
