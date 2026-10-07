@@ -31,8 +31,17 @@ jobs:
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-          
-          
+
+      # fail before publishing so a broken run never overwrites the previous SVGs
+      - name: verify generated SVGs
+        run: |
+          for file in dist/github-contribution-grid-snake.svg dist/github-contribution-grid-snake-dark.svg; do
+            if [ ! -s "$file" ] || ! grep -q "<svg" "$file"; then
+              echo "::error::$file is missing, empty or not a valid SVG"
+              exit 1
+            fi
+          done
+
       # push the content of <build_dir> to a branch
       # the content will be available at https://raw.githubusercontent.com/<github_user>/<repository>/<target_branch>/<file> , or as github page
       - name: push github-contribution-grid-snake.svg to the output branch
