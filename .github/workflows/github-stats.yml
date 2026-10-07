@@ -27,7 +27,7 @@ jobs:
           card: stats
           options: username=${{ github.repository_owner }}&show_icons=true&hide_border=true
           path: dist/stats.svg
-          token: ${{ secrets.STATS_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: generate stats-dark.svg
         uses: stats-organization/github-readme-stats-action@v2
@@ -35,7 +35,7 @@ jobs:
           card: stats
           options: username=${{ github.repository_owner }}&show_icons=true&hide_border=true&theme=github_dark
           path: dist/stats-dark.svg
-          token: ${{ secrets.STATS_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: generate top-langs.svg
         uses: stats-organization/github-readme-stats-action@v2
@@ -43,7 +43,7 @@ jobs:
           card: top-langs
           options: username=${{ github.repository_owner }}&layout=compact&hide_border=true&hide=html,css,scss&size_weight=0.5&count_weight=0.5
           path: dist/top-langs.svg
-          token: ${{ secrets.STATS_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: generate top-langs-dark.svg
         uses: stats-organization/github-readme-stats-action@v2
@@ -51,7 +51,7 @@ jobs:
           card: top-langs
           options: username=${{ github.repository_owner }}&layout=compact&hide_border=true&hide=html,css,scss&size_weight=0.5&count_weight=0.5&theme=github_dark
           path: dist/top-langs-dark.svg
-          token: ${{ secrets.STATS_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       # the branch is overwritten on every run, so it must not be shared with other workflows
       - name: push cards to the output-stats branch
